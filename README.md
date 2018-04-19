@@ -5,6 +5,12 @@ A simple microservice using Docker container
 * Docker Engine
 * Docker Compose
 
+### Topology
+
+![alt text][topology]
+
+[topology]: https://raw.githubusercontent.com/muhammadhanif/microservice-docker/master/topology.png "Topology"
+
 ### How to run
 ```
 git clone https://github.com/muhammadhanif/microservice-docker
