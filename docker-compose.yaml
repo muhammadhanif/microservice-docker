@@ -1,0 +1,49 @@
+version: '2'
+services:
+  
+  page-home:
+    container_name: page-home
+    hostname: page-home
+    build:
+      context: .
+      dockerfile: home
+    working_dir: /app
+    command: python home.py
+    expose:
+      - "80"
+
+  page-product:
+    container_name: page-product
+    hostname: page-product
+    build:
+      context: .
+      dockerfile: product
+    working_dir: /app
+    command: python product.py
+    expose:
+      - "80"
+
+  page-about:
+    container_name: page-about
+    hostname: page-about
+    build:
+      context: .
+      dockerfile: about
+    working_dir: /app
+    command: python about.py
+    expose:
+      - "80"
+
+  nginx-controller:
+    container_name: nginx-controller
+    hostname: nginx-controller
+    build:
+      context: .
+      dockerfile: nginx-controller
+    command: service nginx start
+    links: 
+      - page-home
+      - page-product
+      - page-about
+    ports:
+      - "8888:80"
