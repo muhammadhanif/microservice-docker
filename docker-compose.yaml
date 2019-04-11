@@ -6,8 +6,8 @@ services:
     container_name: page-home
     hostname: page-home
     build:
-      context: .
-      dockerfile: Dockerfile-home
+      context: flask/page-home
+      dockerfile: Dockerfile
     working_dir: /app
     command: python page-home.py
     expose:
@@ -17,8 +17,8 @@ services:
     container_name: page-product
     hostname: page-product
     build:
-      context: .
-      dockerfile: Dockerfile-product
+      context: flask/page-product
+      dockerfile: Dockerfile
     working_dir: /app
     command: python page-product.py
     expose:
@@ -28,8 +28,8 @@ services:
     container_name: page-about
     hostname: page-about
     build:
-      context: .
-      dockerfile: Dockerfile-about
+      context: flask/page-about
+      dockerfile: Dockerfile
     working_dir: /app
     command: python page-about.py
     expose:
@@ -39,8 +39,8 @@ services:
     container_name: nginx-controller
     hostname: nginx-controller
     build:
-      context: .
-      dockerfile: Dockerfile-nginx-controller
+      context: nginx/
+      dockerfile: Dockerfile
     command: service nginx start
     links:
       - page-home

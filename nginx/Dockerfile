@@ -2,4 +2,4 @@ FROM nginx
 
 ENV NGINX_CONFIG_HOME /etc/nginx
 
-COPY nginx/nginx.conf $NGINX_CONFIG_HOME
+COPY nginx.conf $NGINX_CONFIG_HOME
