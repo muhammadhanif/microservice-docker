@@ -1,14 +1,15 @@
 version: '2'
+
 services:
-  
+
   page-home:
     container_name: page-home
     hostname: page-home
     build:
       context: .
-      dockerfile: home
+      dockerfile: Dockerfile-home
     working_dir: /app
-    command: python home.py
+    command: python page-home.py
     expose:
       - "80"
 
@@ -17,9 +18,9 @@ services:
     hostname: page-product
     build:
       context: .
-      dockerfile: product
+      dockerfile: Dockerfile-product
     working_dir: /app
-    command: python product.py
+    command: python page-product.py
     expose:
       - "80"
 
@@ -28,9 +29,9 @@ services:
     hostname: page-about
     build:
       context: .
-      dockerfile: about
+      dockerfile: Dockerfile-about
     working_dir: /app
-    command: python about.py
+    command: python page-about.py
     expose:
       - "80"
 
@@ -39,9 +40,9 @@ services:
     hostname: nginx-controller
     build:
       context: .
-      dockerfile: nginx-controller
+      dockerfile: Dockerfile-nginx-controller
     command: service nginx start
-    links: 
+    links:
       - page-home
       - page-product
       - page-about

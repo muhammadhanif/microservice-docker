@@ -1,5 +1,0 @@
-FROM nginx
-ENV NGINX_CONFIG_HOME /etc/nginx
-WORKDIR $NGINX_CONFIG_HOME
-COPY nginx/nginx.conf $NGINX_CONFIG_HOME
-
