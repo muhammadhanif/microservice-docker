@@ -6,7 +6,7 @@ services:
     container_name: page-home
     hostname: page-home
     build:
-      context: flask/page-home
+      context: app/page-home
       dockerfile: Dockerfile
     working_dir: /app
     command: python page-home.py
@@ -17,10 +17,9 @@ services:
     container_name: page-product
     hostname: page-product
     build:
-      context: flask/page-product
+      context: app/page-product
       dockerfile: Dockerfile
-    working_dir: /app
-    command: python page-product.py
+    command: npm start
     expose:
       - "80"
 
@@ -28,7 +27,7 @@ services:
     container_name: page-about
     hostname: page-about
     build:
-      context: flask/page-about
+      context: app/page-about
       dockerfile: Dockerfile
     working_dir: /app
     command: python page-about.py

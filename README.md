@@ -5,6 +5,11 @@ A simple microservice using Docker container
 * Docker Engine
 * Docker Compose
 
+### APP Stack
+
+* Python: flask
+* Node.js: express
+
 ### Topology
 
 ![alt text][topology]
