@@ -1,5 +1,8 @@
-FROM python:3.6-alpine
+FROM golang:alpine
 
-RUN pip install --trusted-host pypi.python.org Flask
+RUN apk add --no-cache git \
+    && go get -u github.com/labstack/echo/...
+
+WORKDIR /app
 
 ADD . /app

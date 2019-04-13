@@ -5,16 +5,17 @@ A simple microservice using Docker container
 * Docker Engine
 * Docker Compose
 
-### APP Stack
-
-* Python: flask
-* Node.js: express
-
 ### Topology
 
 ![alt text][topology]
 
 [topology]: https://raw.githubusercontent.com/muhammadhanif/microservice-docker/master/topology.png "Topology"
+
+### APP Stack
+
+* Python: flask
+* Node.js: express
+* Golang: echo
 
 ### How to run
 ```

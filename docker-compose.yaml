@@ -29,8 +29,7 @@ services:
     build:
       context: app/page-about
       dockerfile: Dockerfile
-    working_dir: /app
-    command: python page-about.py
+    command: go run page-about.go
     expose:
       - "80"
 

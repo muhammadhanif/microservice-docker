@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Page {{ page }}</title>
+    <title>Page {{index . "page"}}</title>
   </head>
 
   <body>
-    <b>Page:</b> {{ page }} <br/>
-    <b>Served by:</b> {{ hostname }} container
+    <b>Page:</b> {{index . "page"}} <br/>
+    <b>Served by:</b> {{index . "hostname" }} container
     <hr />
     Go to <a href='/'>home</a><br />
     Go to <a href='/product'>product</a>
